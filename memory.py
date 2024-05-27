@@ -5,9 +5,6 @@ class Memory:
         self.firstIndex = {}
 
     def allocate(self , precess):
-        if precess.id in self.firstIndex:
-            print(f'process with id {precess.id} is already in the memory!')
-            return
         for i in range(len(self.free)):
             dif = self.free[i][1] - self.free[i][0]
             if dif >= precess.size:
